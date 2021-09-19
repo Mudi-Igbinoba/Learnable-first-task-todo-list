@@ -77,35 +77,3 @@ deleteAllBtn.onclick = ()=>{
   localStorage.setItem("New Todo", JSON.stringify(listArr)); //set the item in localstorage
   showTasks(); //call the showTasks function
 }
-
-// edit 
-function editTask(index){
-    saveIndex.value = index;
-    let getLocalStorageData = localStorage.getItem("New Todo");
-    listArr = JSON.parse(getLocalStorageData);; 
-    
-    inputBox.value = listArr[index];
-    addBtn.style.display="none";
-    saveTaskBtn.style.display="block";
-    localStorage.setItem("New Todo", JSON.stringify(listArr));
-  showTasks(); //call the showTasks function
-}
-
-// savetask
-saveTaskBtn.addEventListener("click", function(){
-    let getLocalStorageData = localStorage.getItem("New Todo");
-    listArr = JSON.parse(getLocalStorageData);; 
-    
-    
-    for (keys in listArr[saveIndex]) {
-        if(keys == saveIndex){
-            listArr[saveIndex] = inputBox.value;
-        }
-      }
-   
-    saveTaskBtn.style.display="none";
-    addBtn.style.display="block";
-    localStorage.setItem("New Todo", JSON.stringify(listArr));
-    inputBox.value='';
-    showTasks();
-})
