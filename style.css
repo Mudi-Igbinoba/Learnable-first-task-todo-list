@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+    background-color: rgb(50, 50, 129);
+}
+
+.wrapper {
+    background-color: #fff;
+    max-width: 400px;
+    width: 100%;
+    /* height: 250px; */
+    margin: 150px auto;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+h1 {
+    color: #000000;
+    line-height: 1.25;
+    margin-bottom: 15px;
+}
+
+.text-field input {
+    width: 84.5%;
+    height: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #111111;
+}
+
+.text-field button {
+    width: 9%;
+    height: 35px;
+    color: white;
+    background-color: purple;
+    border: 1px solid purple;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.text-field button.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#savetaskbtn {
+    display: none;
+}
+.text-field {
+    padding-bottom: 10px;
+}
+
+
+.to-do-list {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.to-do-list ul {
+    list-style-type: none;
+}
+
+.to-do-list li {
+    list-style-type: none;
+    background-color: #eeebeb;
+    height: 45px;
+    line-height: 45px;
+    position: relative;
+    margin-top: 7px;
+    padding: 0px 15px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.to-do-list li span:nth-of-type(1n) {
+    position: absolute;
+    right: -45px;
+    color: #fff;
+    width: 45px;
+    text-align: center;
+    background-color: #4d3ce7;
+    border-radius: 3px 0px 0px 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.to-do-list li:hover span:nth-of-type(1n) {
+   right: 45px;
+}
+
+.to-do-list li span:nth-of-type(2n) {
+    position: absolute;
+    right: -45px;
+    color: #fff;
+    width: 45px;
+    text-align: center;
+    background-color: #e74c3c;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.to-do-list li:hover span:nth-of-type(2n) {
+    right: 0px;
+}
+
+.to-do-list li input[type=text] {
+    display: none;
+}
+
+footer {
+    margin-top: 30px;
+}
+
+footer button {
+    position: relative;
+    left: 145px;
+    padding: 5px;
+    width: 85px;
+    border: 1px solid purple;
+    background-color: purple;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+footer button.active {
+    opacity: 1;
+    pointer-events: auto;
+}
